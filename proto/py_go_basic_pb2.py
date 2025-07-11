@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11py_go_basic.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2b\n\x07Greeter\x12(\n\x08SayHello\x12\r.HelloRequest\x1a\x0b.HelloReply\"\x00\x12-\n\rSayHelloAgain\x12\r.HelloRequest\x1a\x0b.HelloReply\"\x00\x42\x32Z0github.com/CompressedWater/grpc_py_go_test/protob\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11py_go_basic.proto\".\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08\x63ur_date\x18\x02 \x01(\t\"/\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x10\n\x08\x63ur_date\x18\x02 \x01(\t2b\n\x07Greeter\x12(\n\x08SayHello\x12\r.HelloRequest\x1a\x0b.HelloReply\"\x00\x12-\n\rSayHelloAgain\x12\r.HelloRequest\x1a\x0b.HelloReply\"\x00\x42\x32Z0github.com/CompressedWater/grpc_py_go_test/protob\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,9 +33,9 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z0github.com/CompressedWater/grpc_py_go_test/proto'
   _globals['_HELLOREQUEST']._serialized_start=21
-  _globals['_HELLOREQUEST']._serialized_end=49
-  _globals['_HELLOREPLY']._serialized_start=51
-  _globals['_HELLOREPLY']._serialized_end=80
-  _globals['_GREETER']._serialized_start=82
-  _globals['_GREETER']._serialized_end=180
+  _globals['_HELLOREQUEST']._serialized_end=67
+  _globals['_HELLOREPLY']._serialized_start=69
+  _globals['_HELLOREPLY']._serialized_end=116
+  _globals['_GREETER']._serialized_start=118
+  _globals['_GREETER']._serialized_end=216
 # @@protoc_insertion_point(module_scope)

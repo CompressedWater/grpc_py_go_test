@@ -1,4 +1,3 @@
-// Package main implements a server for Greeter service.
 package main
 
 import (
@@ -7,24 +6,23 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"time"
 
-	"google.golang.org/grpc"
 	pb "github.com/CompressedWater/grpc_py_go_test/proto"
+	"google.golang.org/grpc"
 )
 
 var (
 	port = flag.Int("port", 50051, "The server port")
 )
 
-// server is used to implement helloworld.GreeterServer.
 type server struct {
 	pb.UnimplementedGreeterServer
 }
 
-// SayHello implements helloworld.GreeterServer
 func (s *server) SayHello(_ context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
-	log.Printf("Received: %v", in.GetName())
-	return &pb.HelloReply{Message: "Hello " + in.GetName()}, nil
+	log.Printf("Received: %v; Time: %v", in.GetName(), in.GetCurDate())
+	return &pb.HelloReply{Message: "Hello " + in.GetName(), CurDate: "Time: " + time.Now().String()}, nil
 }
 
 func main() {

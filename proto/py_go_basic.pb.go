@@ -25,6 +25,7 @@ const (
 type HelloRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	CurDate       string                 `protobuf:"bytes,2,opt,name=cur_date,json=curDate,proto3" json:"cur_date,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -66,10 +67,18 @@ func (x *HelloRequest) GetName() string {
 	return ""
 }
 
+func (x *HelloRequest) GetCurDate() string {
+	if x != nil {
+		return x.CurDate
+	}
+	return ""
+}
+
 // The response message containing the greetings
 type HelloReply struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Message       string                 `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+	CurDate       string                 `protobuf:"bytes,2,opt,name=cur_date,json=curDate,proto3" json:"cur_date,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -111,16 +120,25 @@ func (x *HelloReply) GetMessage() string {
 	return ""
 }
 
+func (x *HelloReply) GetCurDate() string {
+	if x != nil {
+		return x.CurDate
+	}
+	return ""
+}
+
 var File_py_go_basic_proto protoreflect.FileDescriptor
 
 const file_py_go_basic_proto_rawDesc = "" +
 	"\n" +
-	"\x11py_go_basic.proto\"\"\n" +
+	"\x11py_go_basic.proto\"=\n" +
 	"\fHelloRequest\x12\x12\n" +
-	"\x04name\x18\x01 \x01(\tR\x04name\"&\n" +
+	"\x04name\x18\x01 \x01(\tR\x04name\x12\x19\n" +
+	"\bcur_date\x18\x02 \x01(\tR\acurDate\"A\n" +
 	"\n" +
 	"HelloReply\x12\x18\n" +
-	"\amessage\x18\x01 \x01(\tR\amessage2b\n" +
+	"\amessage\x18\x01 \x01(\tR\amessage\x12\x19\n" +
+	"\bcur_date\x18\x02 \x01(\tR\acurDate2b\n" +
 	"\aGreeter\x12(\n" +
 	"\bSayHello\x12\r.HelloRequest\x1a\v.HelloReply\"\x00\x12-\n" +
 	"\rSayHelloAgain\x12\r.HelloRequest\x1a\v.HelloReply\"\x00B2Z0github.com/CompressedWater/grpc_py_go_test/protob\x06proto3"

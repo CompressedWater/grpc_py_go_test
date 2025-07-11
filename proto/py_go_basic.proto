@@ -2,20 +2,17 @@ syntax = "proto3";
 
 option go_package = "github.com/CompressedWater/grpc_py_go_test/proto";
 
-// The greeting service definition.
 service Greeter {
-  // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {}
-  // Sends another greeting
   rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
 }
 
-// The request message containing the user's name.
 message HelloRequest {
   string name = 1;
+  string cur_date = 2;
 }
 
-// The response message containing the greetings
 message HelloReply {
   string message = 1;
+  string cur_date = 2;
 }
